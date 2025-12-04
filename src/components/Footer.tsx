@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 <span className="text-white font-bold text-xl">K</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">KRIDHYAN INFOTECH</h3>
+                <h3 className="text-xl font-bold">KRIDHYAM INFOTECH</h3>
                 <p className="text-xs text-gray-400">We Build Digital Experiences</p>
               </div>
             </div>
@@ -94,18 +94,18 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400">
                 <MapPin size={20} className="flex-shrink-0 mt-1 text-[#ff002b]" />
-                <span>Mumbai, Maharashtra, India</span>
+                <span>Rajkot, Gujarat, India</span>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <Mail size={20} className="flex-shrink-0 mt-1 text-[#ff002b]" />
-                <a href="mailto:contact@kridhyaninfotech.com" className="hover:text-white transition-colors">
-                  contact@kridhyaninfotech.com
+                <a href="mailto:schhelavadawork@gmail.com" className="hover:text-white transition-colors">
+                  schhelavadawork@gamil.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <Phone size={20} className="flex-shrink-0 mt-1 text-[#ff002b]" />
-                <a href="tel:+91XXXXXXXXXX" className="hover:text-white transition-colors">
-                  +91 XXXXXXXXXX
+                <a href="tel:+916351804604" className="hover:text-white transition-colors">
+                  +91 6351804604
                 </a>
               </li>
             </ul>

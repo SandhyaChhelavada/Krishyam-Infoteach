@@ -132,22 +132,24 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-6 z-10 text-center">
         <div className="max-w-5xl mx-auto space-y-8 animate-fadeInUp">
           <div className="inline-block px-6 py-2 bg-gradient-to-r from-[#ff002b]/10 to-[#ff4d6d]/10 rounded-full border border-[#ff002b]/20 mb-4">
-            <span className="text-[#ff002b] font-semibold">Welcome to the Future of Digital Innovation</span>
+            <span className="text-[#ff002b] font-semibold">Welcome to the Kridhyam Infotech</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-[#ff002b] to-[#ff4d6d] bg-clip-text text-transparent">
-              Empowering Your Business
+              Transforming Ideas Into Intelligent Digital Experiences
             </span>
-            <br />
-            <span className="text-gray-800">
-              With AI-Driven Digital Solutions
+          </h1>
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+            <span className="text-gray-500">
+             Web Development • AI Chatbots • AI Images • Creative Branding
+              Crafted with smart tech. Delivered with human warmth.
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-            Web Development · No-Code Automation · AI Image Generation · Chatbots
-          </p>
+          {/* <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+           Kridhyam Infotech offers Web Development, AI Chatbots, AI Image Systems, and Creative Branding services. Build fast, modern, and scalable digital experiences with our expert team
+          </p> */}
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
             <a
@@ -159,7 +161,7 @@ const Hero: React.FC = () => {
             </a>
 
             <a
-              href="https://wa.me/91XXXXXXXXXX?text=Hello%20KridHyan%20Infotech%2C%20I%20need%20services"
+              href="https://wa.me/916351804604?text=Hello%20KridHyan%20Infotech%2C%20I%20need%20services"
               target="_blank"
               rel="noopener noreferrer"
               className="group px-8 py-4 bg-white border-2 border-[#ff002b] text-[#ff002b] rounded-full font-semibold text-lg hover:bg-gradient-to-r hover:from-[#ff002b] hover:to-[#ff4d6d] hover:text-white hover:border-transparent transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
@@ -171,9 +173,9 @@ const Hero: React.FC = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 max-w-4xl mx-auto">
             {[
-              { number: "150+", label: "Projects Delivered" },
+              { number: "5+", label: "Projects Delivered" },
               { number: "98%", label: "Client Satisfaction" },
-              { number: "50+", label: "Happy Clients" },
+              { number: "10+", label: "Happy Clients" },
               { number: "24/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index} className="text-center group">

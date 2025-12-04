@@ -5,6 +5,7 @@ type ContactForm = {
   name: string;
   email: string;
   phone: string;
+  service: string;
   message: string;
 };
 
@@ -13,24 +14,45 @@ const Contact: React.FC = () => {
     name: "",
     email: "",
     phone: "",
+    service: "",
     message: "",
   });
+
+  const services = [
+    "Web Devlopment",
+    "AI Prompt Engineering",
+    "No-Code Website Development",
+    "AI-Based UI/UX Design",
+    "AI Chatbots",
+    "AI Image Generation",
+    "Graphic Design & Branding",
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const whatsappMessage = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
+    const whatsappMessage = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service || "Not specified"}\nMessage: ${formData.message}`;
     const whatsappUrl = `https://wa.me/916351804604?text=${encodeURIComponent(
       whatsappMessage
     )}`;
 
     window.open(whatsappUrl, "_blank");
 
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -44,17 +66,17 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: "Location",
-      content: "Mumbai, Maharashtra, India",
+      content: "Rajkot, Gujarat, India",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "contact@kridhyaninfotech.com",
+      content: "schhelavadawork@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 XXXXXXXXXX",
+      content: "+91 6351804604",
     },
   ];
 
@@ -201,6 +223,29 @@ const Contact: React.FC = () => {
                     className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#ff002b] focus:bg-white focus:outline-none transition-all duration-300"
                     placeholder="+91 XXXXXXXXXX"
                   />
+                </div>
+
+                {/* Service dropdown */}
+                <div className="group">
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Service Required
+                  </label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#ff002b] focus:bg-white focus:outline-none transition-all duration-300"
+                  >
+                    <option value="" disabled>
+                      — Select a service —
+                    </option>
+                    {services.map((s) => (
+                      <option key={s} value={s}>
+                        {s}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="group">
